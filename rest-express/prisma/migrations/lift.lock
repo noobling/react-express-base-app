@@ -3,8 +3,4 @@
 # lift lockfile v1
 # Read more about conflict resolution here: TODO
 
-20191116210503-add-message-model
-20191117010357-add-nickname-attribute-to-user
-20191117010616-make-email-optional
-20191117110600-rename-author-name-to-author
-20191120151750-add-role-field-to-user
+20191205145929-init
