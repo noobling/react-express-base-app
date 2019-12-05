@@ -1,0 +1,37 @@
+datasource db {
+  provider = "sqlite"
+  url = "***"
+  default  = true
+}
+
+generator photon {
+  provider = "photonjs"
+}
+
+model User {
+  id        String    @default(cuid()) @id
+  email     String    @unique
+  name      String?
+  nickname  String?
+  avatarUrl String
+  posts     Post[]
+  messages  Message[]
+}
+
+model Post {
+  id        String   @default(cuid()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean  @default(true)
+  title     String
+  content   String?
+  author    User?
+}
+
+model Message {
+  id         String   @default(cuid()) @id
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  text       String
+  authorName User
+}

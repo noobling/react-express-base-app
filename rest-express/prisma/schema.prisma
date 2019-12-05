@@ -1,0 +1,50 @@
+datasource sqlite {
+  provider = "sqlite"
+  url      = "file:dev.db"
+  enabled  = true
+}
+
+// This is used in prod
+// datasource db {
+//   provider = "mysql"
+//   url      = env("MYSQL_URL")
+//   default  = true
+// }
+
+enum Role {
+  USER
+  ADMIN
+}
+
+generator photon {
+  provider = "photonjs"
+}
+
+model User {
+  id        String    @default(cuid()) @id
+  email     String?   @unique
+  name      String?
+  nickname  String?
+  avatarUrl String
+  posts     Post[]
+  messages  Message[]
+  roles     Role[]
+}
+
+model Post {
+  id        String   @default(cuid()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean  @default(true)
+  title     String
+  content   String?
+  author    User?
+}
+
+model Message {
+  id        String   @default(cuid()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  text      String
+  author    User
+}

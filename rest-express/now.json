@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "express-photon",
+  "env": {
+    "MYSQL_URL": "mysql://vr2erdwjwt3y0lt4:k7l0b5cfj8cydcnh@ysp9sse09kl0tzxj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/augu3aeus85p1ove?sslmode=prefer"
+  }
+}
