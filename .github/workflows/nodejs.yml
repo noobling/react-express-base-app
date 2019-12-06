@@ -29,5 +29,4 @@ jobs:
       working-directory: rest-express
       run: |
         yarn install
-        yarn build
         yarn test
