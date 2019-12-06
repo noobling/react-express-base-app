@@ -2,7 +2,7 @@ import React from 'react';
 import Feed from '.';
 import { mount } from 'enzyme';
 
-jest.mock('SimpleBar', () => {
+jest.mock('simplebar-react', () => {
   return ({ children }: { children: any }) => <div>{children}</div>;
 });
 
