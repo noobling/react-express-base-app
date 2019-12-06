@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: yarn install, build, and test frontend
       working-directory: react
       run: |
         yarn install
@@ -25,3 +25,9 @@ jobs:
         yarn test
       env:
         CI: true
+    - name: yarn install, build and test backend
+      working-directory: rest-express
+      run: |
+        yarn install
+        yarn build
+        yarn test
