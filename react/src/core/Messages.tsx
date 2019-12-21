@@ -64,7 +64,8 @@ export default function Messages({ items, onMessageDelete }: Props) {
     };
 
     getCurrentUser();
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
