@@ -26,7 +26,7 @@
     "@types/express-jwt": "^0.0.42",
     "@types/jest": "^24.0.23",
     "@types/node": "12.12.5",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "axios-mock-adapter": "^1.17.0",
     "body-parser": "1.19.0",
     "cors": "^2.8.5",
